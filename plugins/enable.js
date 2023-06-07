@@ -1,4 +1,4 @@
-var handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
++var handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 	const sections = [
    {
 	title: `${dmenub} List Options`,
@@ -285,13 +285,12 @@ const listMessage = {
     default:
       if (!/[01]/.test(command)) return conn.sendMessage(m.chat, listMessage, fakes)
       throw false
-  }
-  conn.send2ButtonDoc(m.chat, `*${htki} OPTIONS ${htka}*
-🗂️ *Type:* ${type} 
-📊 *Status:* Succes ✅
-🎚️ *Options:* ${isEnable ? 'Enable' : 'Disable'}
-📣 *For:* ${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}
-`, wm, 'ᴏᴘᴛɪᴏɴs ᴛʜɪs ʙᴏᴛ', `${isEnable ? '✖️ Disable' : '✔️ Enable'}`, `${isEnable ? `.off ${type}` : `.on ${type}`}`, '🎀 Menu', '.menu', fakes, adReply)
+}
+  
+m.reply(`
+✅ *${type}* Telah *${isEnable ? 'Diaktifkan' : 'Dinonaktifkan'}* ${isAll ? 'Dalam bot ini' : isUser ? '' : 'Dalam group ini'}
+`.trim()) 
+
 }
 handler.help = ['enable', 'disable'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']

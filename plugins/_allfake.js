@@ -73,7 +73,7 @@ handler.all = async function (m) {
 					description: wm3,
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pic)).buffer(),
-					sourceUrl: "https://github.com/ImYanXiao"			
+					sourceUrl: "https://instagram.com/zallstorereal"			
 				}
 			}
 		}
@@ -231,7 +231,7 @@ global.fakefb = {
                "groupInviteMessage": {
                    "groupJid": "6285736178354-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Elaina", 
+                   "groupName": "Kawan Zall", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
@@ -298,21 +298,21 @@ export default handler
 
 function ucapan() {
 	const time = moment.tz('Asia/Jakarta').format('HH')
-	let res = "Selamat malam 🌌"
+	let res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	if(time >= 1) {
-		res = "Selamat Dini hari 🌌"
+		res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	}
 	if(time >= 4) {
-		res = "Selamat pagi ⛅"
+		res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	}
 	if(time > 10) {
-		res = "Selamat siang 🌅"
+		res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	}
 	if(time >= 15) {
-		res = "Selamat sore 🌇"
+		res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	}
 	if(time >= 18) {
-		res = "Selamat malam 🌃"
+		res = "ᴍᴇᴍᴘʀᴏsᴇs ᴡɪʀ"
 	}
 	return res
 }
